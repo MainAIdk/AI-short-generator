@@ -5,14 +5,24 @@ Dette er et værktøj til generering af videoer, som skaber video shorts (reels 
 Der er mulighed for at bruge open-source LLM'er som Mistral-7b og open-source stable diffusion modeller, men dette kræver adgang til GPU-ressourcer og er derfor undladt for enkelhedens skyld (i hvert fald i første omgang).
 
 ## Rettigheder
-Dette kode-repositorium er under MIT-licensen og kan derfor bruges frit af enhver, der måtte ønske det. Der gives dog ingen garantier, og softwaren leveres 'as is'. MainAI påtager sig intet ansvar for det indhold, du bruger denne software til at producere, eller de eventuelle ophavsretlige problemer, der kan opstå ved generering af kopi-indholdet.
+Denne kode er under MIT-licensen og kan derfor bruges frit af enhver, der måtte ønske det. Der gives dog ingen garantier, og softwaren leveres 'as is'. MainAI påtager sig intet ansvar for det indhold, du bruger denne software til at producere, eller de eventuelle ophavsretlige problemer, der kan opstå ved generering af kopi-indholdet.
 
 ## Hurtig start
+
+Det er desværre ikke 100% gratis at generere disse shorts. Du kan forvente at bruge omkring 0.10-0.45$ i OpenAI credits per video (hovedsageligt DALL-E 3, som koster penge per genereret billede).
+
+Først skal du bruge en OpenAI API-nøgle samt en Elevenlabs nøgle. Det er ikke nødvendigt med en Elevenlabs nøgle i starten, men efter et par videoer skal du bruge en nøgle for at fortsætte.
+
+OpenAI api key:
+https://platform.openai.com/api-keys
+
+Elevenlabs api nøgle (ikke nødvendig til en start)
+https://elevenlabs.io/speech-synthesis
 
 
 1. **Klon Repositoriet**  
    ```
-   git clone https://github.com/MainAIdk/ai-short-video-generator
+   git clone https://github.com/MainAIdk/AI-short-generator
    ```
 
 2. **Naviger til Mappen**  
@@ -70,3 +80,8 @@ Skriv i din source.txt, hvad din short skal omhandle, for eksempel:
     Genererer video...
     FÆRDIG! Her er din video: shorts/1701788183/short.avi
     ``````
+
+
+## Kontakt Os for Hjælp Med Dit AI Projekt
+Står du og skal bruge hjælp med opsætningen af dette projekt, dit eller jeres virksomheds AI-projekt? Så kontakt os på contact@mainai.dk.
+
