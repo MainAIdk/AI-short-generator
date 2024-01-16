@@ -1,67 +1,67 @@
 # AI shorts generator
 
-Dette er et værktøj til generering af videoer, der skaber video shorts (reels eller shorts) ved hjælp af scripts genereret af GPT-4, indtalt af Elevenlabs tale syntese eller OpenAIs tekst-til-tale, mens DALL-E 3 genererer baggrundsbilleder, som sammensættes af OpenCV til en Short.
+Dette er et værktøj til generering af videoer, som skaber video shorts (reels eller shorts) ved hjælp af scripts genereret af GPT-4, indtalt af Elevenlabs tale syntese eller OpenAIs tekst-til-tale, mens DALL-E 3 genererer baggrundsbilleder, som sammensættes af OpenCV til en Short.
 
-Der er mulighed for at bruge open source LLM'er som Mistral-7b og open source stable diffusion modeller, men dette kræver adgang til GPU ressourcer, og er derfor undladt for simplhedens skyld. (ihvertfald i første omgang)
+Der er mulighed for at bruge open-source LLM'er som Mistral-7b og open-source stable diffusion modeller, men dette kræver adgang til GPU-ressourcer og er derfor undladt for enkelhedens skyld (i hvert fald i første omgang).
 
 ## Rettigheder
-Dette kode repo er under MIT-license og kan derfor bruges frit af enhver der skulle have lyst men der gives ingen garantier og softwaren kan bruges 'as is' og MainAI tager ingen ansvar for det indhold du bruger denne software til at producere eller måtte komme i problemer med ophavsrettigheder for at genere.
+Dette kode-repositorium er under MIT-licensen og kan derfor bruges frit af enhver, der måtte ønske det. Der gives dog ingen garantier, og softwaren leveres 'as is'. MainAI påtager sig intet ansvar for det indhold, du bruger denne software til at producere, eller de eventuelle ophavsretlige problemer, der kan opstå ved generering af kopi-indholdet.
 
-## Quick Start
+## Hurtig start
 
 
-1. **Klon repo**  
+1. **Klon Repositoriet**  
    ```
    git clone https://github.com/MainAIdk/ai-short-video-generator
    ```
 
-2. **Naviger til folder**  
+2. **Naviger til Mappen**  
    ```
    cd ai-shorts
    ```
 
-3. **Installer et virtuelt miljø**  
+3. **Installer et Virtuelt Miljø**  
 
    ```
    python -m venv myvenv
    ```
 
-4. **Start miljøet**
+4. **Aktiver Miljøet**
 Skriv dette i din terminal
    ```
    myvenv\Scripts\activate
    ```
 
-4. **Installer requirements i dit miljø**  
+5. **Installer Kravene i Dit Miljø**  
 
    ```
    pip install -r requirements.txt
    ```
-5. **Sæt miljøvariabler**  
+6. **Sæt Miljøvariabler**  
 
    ```
-   Åben .env copy og indsæt dine api keys derefter slet copy så navnet på filen er .env
+   Åbn .env copy og indsæt dine API-nøgler. Slet derefter 'copy', så filnavnet bliver .env.
    ```
 
-6. **Opret txt fil til GPT**
-Opret en fil og kald den eksempelvis
+7. **Opret en Tekstfil til GPT**
+Opret en fil og navngiv den, eksempelvis:
     ```
     source.txt
     ```
 
-7. **instruere GPT i din source fil**
-Skriv i din source.txt hvad din short skal omhandle
+8. **Instruer GPT i Din Source-Fil**
+Skriv i din source.txt, hvad din short skal omhandle, for eksempel:
     ```
-    En short video omkring delfiner om hvor højt de kan springe i forhold til mennesker.
+    En short video omkring delfiner og hvor højt de kan springe i forhold til mennesker.
     ```
 
-8. **Genere din short video**
+9. **Generer din short video**
 
     ```
     main.py source.txt
     ```
-    Og vent på scriptet genere din video.
-    Det skulle gerne se sådan her ud i din terminal
+    Vent på, at scriptet genererer din video.
+    Processen skulle gerne se sådan ud i din terminal:
     ```console
     main.py source.txt
     Genererer manuskript...
