@@ -1,4 +1,7 @@
-#!/usr/bin/env python3
+# Denne software er under MIT license
+# Og kan derfor benyttes frit af enhver.
+# Lavet af Mads Andersen @ MainAI
+# Stjerne modtages med kyshånd
 
 from openai import OpenAI
 import time
@@ -9,8 +12,18 @@ import os
 import narration
 import images
 import video
+from dotenv import load_dotenv
 
-client = OpenAI()
+# Load the environment variables from the .env file
+load_dotenv()
+
+# Fetch API keys from environment
+elevenlabs_api_key = os.getenv('ELEVENLABS_API_KEY')
+openai_api_key = os.getenv('OPENAI_API_KEY')
+
+
+# Initialize the OpenAI client with the API key
+client = OpenAI(api_key=openai_api_key)
 
 if len(sys.argv) < 2:
     print(f"USAGE: {sys.argv[0]} SOURCE_FILENAME")
@@ -26,7 +39,7 @@ basedir = os.path.join("shorts", short_id)
 if not os.path.exists(basedir):
     os.makedirs(basedir)
 
-print("Generating script...")
+print("Genererer manuskript..")
 
 response = client.chat.completions.create(
     model="gpt-4",
@@ -40,6 +53,8 @@ You will need to generate descriptions of images for each of the sentences in th
 You are however allowed to use any content, including real names in the narration. Only image descriptions are restricted.
 
 Note that the narration will be fed into a text-to-speech engine, so don't use special characters.
+
+DO NOT generate any image describtions of anything that violates the image generation saftey systems.
 
 Respond with a pair of an image description in square brackets and a narration below it. Both of them should be on their own lines, as follows:
 
@@ -61,7 +76,7 @@ Narrator: "One sentence of narration"
 
 The short should be 6 sentences maximum.
 
-You should add a description of a fitting backround image in between all of the narrations. It will later be used to generate an image with AI.
+You should add a description of a fitting, beautiful and captivating background image in between all of the narrations. It will later be used to generate an image with AI. Avoid images with letters and sign.
 """
         },
         {
@@ -81,13 +96,13 @@ data, narrations = narration.parse(response_text)
 with open(os.path.join(basedir, "data.json"), "w") as f:
     json.dump(data, f, ensure_ascii=False)
 
-print(f"Generating narration...")
+print(f"Genererer fortælling....")
 narration.create(data, os.path.join(basedir, "narrations"))
 
-print("Generating images...")
+print("Genererer billeder...")
 images.create_from_data(data, os.path.join(basedir, "images"))
 
-print("Generating video...")
+print("Genererer video...")
 video.create(narrations, basedir, output_file)
 
-print(f"DONE! Here's your video: {os.path.join(basedir, output_file)}")
+print(f"FÆRDIG! Her er din video: {os.path.join(basedir, output_file)}")

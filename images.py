@@ -2,6 +2,8 @@ from openai import OpenAI
 import base64
 import os
 
+
+
 client = OpenAI()
 
 def create_from_data(data, output_dir):

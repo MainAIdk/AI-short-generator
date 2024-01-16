@@ -2,10 +2,7 @@ from elevenlabs import generate, set_api_key, save, RateLimitError
 import openai
 import os
 
-elevenlabs_key = os.getenv("ELEVENLABS_API_KEY")
-
-if elevenlabs_key:
-    set_api_key(elevenlabs_key)
+set_api_key("d3669c8b1b256ce59356a1115e220a8a")
 
 narration_api = "elevenlabs" # (or "openai")
 
