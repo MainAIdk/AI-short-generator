@@ -2,9 +2,11 @@ __pycache__/
 old/
 shorts/
 venv/
+myenv/
 aishort/
 *.txt
 !response.txt
 !requirements.txt
 .env
+
 

@@ -1,4 +1,5 @@
 opencv-python
+python-dotenv
 elevenlabs
 openai
 pydub

@@ -68,7 +68,7 @@ Skriv i din source.txt, hvad din short skal omhandle, for eksempel:
 9. **Generer din short video**
 
     ```
-    main.py source.txt
+    python main.py source.txt
     ```
     Vent på, at scriptet genererer din video.
     Processen skulle gerne se sådan ud i din terminal:
