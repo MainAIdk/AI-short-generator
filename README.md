@@ -83,5 +83,6 @@ Skriv i din source.txt, hvad din short skal omhandle, for eksempel:
 
 
 ## Kontakt Os for Hjælp Med Dit AI Projekt
-Står du og skal bruge hjælp med opsætningen af dette projekt, dit eller jeres virksomheds AI-projekt? Så kontakt os på contact@mainai.dk.
+Står du og skal bruge hjælp med opsætningen af dette projekt, dit eller jeres virksomheds AI-projekt? 
+Så kontakt os på contact@mainai.dk.
 
