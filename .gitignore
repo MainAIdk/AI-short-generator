@@ -2,7 +2,7 @@ __pycache__/
 old/
 shorts/
 venv/
-myenv/
+myvenv/
 aishort/
 *.txt
 !response.txt
