@@ -50,7 +50,7 @@ def create(data, output_folder):
             audio = generate(
             # Ændre Speaker og model her!
             # https://elevenlabs.io/docs/api-reference/text-to-speech
-                
+                 
                 text=element["content"],
                 voice="Michael",
                 model="eleven_monolingual_v1"
